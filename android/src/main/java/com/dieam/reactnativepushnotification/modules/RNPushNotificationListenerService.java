@@ -135,7 +135,7 @@ public class RNPushNotificationListenerService extends FirebaseMessagingService 
         pushNotificationHelper.sendToNotificationCentre(bundle);
     }
 
-    private boolean isApplicationInForeground() {
+    public boolean isApplicationInForeground() {
         ActivityManager activityManager = (ActivityManager) this.getSystemService(ACTIVITY_SERVICE);
         List<RunningAppProcessInfo> processInfos = activityManager.getRunningAppProcesses();
         if (processInfos != null) {
